@@ -3,19 +3,18 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class GameManager : MonoBehaviour
+    public class Player : MonoBehaviour
     {
         [SerializeField]
         PlayerStats stats;
         [SerializeField]
         Deck deck;
 
-        GameManagerGateway gateway;
+        CardEffectGateway cardEffectGateway;
 
-        void Start()
+        private void Start()
         {
-            gateway = new GameMangerGatewayImpl(deck, stats);
-            gateway.startGame();
+            cardEffectGateway = new CardEffectGatewayImpl(deck, stats);
         }
     }
 }

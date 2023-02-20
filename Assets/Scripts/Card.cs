@@ -1,11 +1,7 @@
 using Assets.Scripts;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-[CreateAssetMenu]
-public abstract class Card : MonoBehaviour
+public interface Card
 {
-    [SerializeField]
-    CardEffect[] effects;
+    public CardEffect[] getPassiveEffects();
+    public CardEffect[] getActiveEffects();
 }

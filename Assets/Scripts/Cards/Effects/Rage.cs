@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rage : CardEffect
+public class Rage : ActiveCardEffect
 {
-    public override void callEffect(CardEffectGameGateway gateway)
+    public void callEffect(CardEffectGateway gateway)
     {
         gateway.moultiplyAttack(20);
     }

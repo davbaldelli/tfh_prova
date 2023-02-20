@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace Assets.Scripts.Cards.Effects
 {
-    public class Braveheart : CardEffect
+    public class Braveheart : PassiveCardEffect
     {
-        public override void callEffect(CardEffectGameGateway gateway)
+        public void callEffect(CardEffectGateway gateway)
         {
             gateway.addLife(20);
         }

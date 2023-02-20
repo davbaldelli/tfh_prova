@@ -1,29 +1,31 @@
-﻿using System.Collections;
-using UnityEngine;
-
-namespace Assets.Scripts
+﻿namespace Assets.Scripts
 {
     public class GameMangerGatewayImpl : GameManagerGateway
     {
-        [SerializeField]
         Deck deck;
-        [SerializeField]
         PlayerStats playerStats;
-        public override void drawCards()
+
+        public GameMangerGatewayImpl(Deck deck, PlayerStats playerStats)
         {
-            if(playerStats.hand.Length < 5)
+            this.deck = deck;
+            this.playerStats = playerStats;
+        }
+
+        public void drawCards()
+        {
+            if (playerStats.hand.Length < 5)
             {
                 for (int i = 0; i < 5 - playerStats.hand.Length; i++)
                     deck.drawCard();
             }
         }
 
-        public override void finishTurn()
+        public void finishTurn()
         {
             //do stuff
         }
 
-        public override void startGame()
+        public void startGame()
         {
             playerStats.life = 100;
             playerStats.attackMult = 1;
@@ -32,5 +34,6 @@ namespace Assets.Scripts
                 deck.drawCard();
             }
         }
+
     }
 }

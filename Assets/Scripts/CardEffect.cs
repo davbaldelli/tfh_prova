@@ -1,13 +1,14 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.Events;
-
-namespace Assets.Scripts
+﻿namespace Assets.Scripts
 {
-    public abstract class CardEffect : MonoBehaviour
+    public interface CardEffect
     {
         //we should define a type that describes when the effect should be raised
         //or maybe we should create different subclasses
-        public abstract void callEffect(CardEffectGameGateway gateway);
+        public void callEffect(CardEffectGateway gateway);
     }
+
+    public interface ActiveCardEffect : CardEffect{}
+
+    public interface PassiveCardEffect : CardEffect {}
+
 }
