@@ -23,7 +23,7 @@
             playerStats.hand.Add(card);
         }
 
-        public void moultiplyAttack(int amount)
+        public void addAttackMult(float amount)
         {
             playerStats.attackMult += amount;
         }

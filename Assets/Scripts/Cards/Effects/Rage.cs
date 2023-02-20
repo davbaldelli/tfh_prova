@@ -7,6 +7,6 @@ public class Rage : ActiveCardEffect
 {
     public void callEffect(CardEffectGateway gateway)
     {
-        gateway.moultiplyAttack(20);
+        gateway.addAttackMult(0.2f);
     }
 }

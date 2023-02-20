@@ -7,7 +7,7 @@ namespace Assets.Scripts
     public class PlayerStats : ScriptableObject
     {
         public int life;
-        public int attackMult;
+        public float attackMult;
         public List<Card> hand = new List<Card>();
     }
 }
