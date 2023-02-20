@@ -8,5 +8,6 @@ namespace Assets.Scripts
     {
         public int life;
         public int attackMult;
+        public Card[] hand;
     }
 }
