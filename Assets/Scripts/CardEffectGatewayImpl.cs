@@ -19,7 +19,8 @@
 
         public void drawCard()
         {
-            deck.drawCard(); 
+            Card card = deck.getCardFromTop(); 
+            playerStats.hand.Add(card);
         }
 
         public void moultiplyAttack(int amount)

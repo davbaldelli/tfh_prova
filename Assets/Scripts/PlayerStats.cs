@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -8,6 +8,6 @@ namespace Assets.Scripts
     {
         public int life;
         public int attackMult;
-        public Card[] hand;
+        public List<Card> hand = new List<Card>();
     }
 }

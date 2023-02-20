@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Cards;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -6,11 +7,16 @@ namespace Assets.Scripts
     [CreateAssetMenu]
     public class Deck : ScriptableObject
     {
-        private Card[] cards;
+        Stack<Card> cards = new Stack<Card>();
 
-        public void drawCard()
+        public Card getCardFromTop()
         {
-            //TODO
+            return cards.Pop();
+        }
+
+        public void addCardToTop(Card card)
+        {
+            cards.Push(card);
         }
     }
 }

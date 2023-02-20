@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Cards;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -9,13 +9,14 @@ namespace Assets.Scripts
         PlayerStats stats;
         [SerializeField]
         Deck deck;
+        Card[] startingCards = new Card[] {new Gunslinger(), new Gunslinger(), new Renegade()};
 
         GameManagerGateway gateway;
 
         void Start()
         {
             gateway = new GameMangerGatewayImpl(deck, stats);
-            gateway.startGame();
+            gateway.startGame(startingCards);
         }
     }
 }

@@ -3,7 +3,7 @@
     public interface GameManagerGateway
     {
         public void finishTurn();
-        public void startGame();
+        public void startGame(Card[] startingCards);
         public void drawCards();
     }
 }
