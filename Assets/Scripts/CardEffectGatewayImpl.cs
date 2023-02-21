@@ -3,30 +3,30 @@
 public class CardEffectGatewayImpl : CardEffectGateway
 {
 
-    MatchData matchData;
+    PlayerData playerData;
 
-    public CardEffectGatewayImpl(MatchData matchData)
+    public CardEffectGatewayImpl(PlayerData playerData)
     {
-        this.matchData = matchData;
+        this.playerData = playerData;
     }
 
     public void addLife(int amount)
     {
-        matchData.playerHealth += amount;
+        playerData.health += amount;
     }
 
     public void drawCard()
     {
-        matchData.playerHand.Add(matchData.discardDeck.Pop());
+        playerData.hand.Add(playerData.discardDeck.Pop());
     }
 
     public void addAttackMult(float amount)
     {
-        matchData.playerAttackMultiplier += amount;
+        playerData.attackMultiplier += amount;
     }
 
     public void addDefenseMult(float amount)
     {
-        matchData.playerDefenseMultiplier += amount;
+        playerData.defenseMultiplier += amount;
     }
 }

@@ -1,26 +1,20 @@
-﻿using TMPro;
-using UnityEngine;
+﻿using Cards;
 
-public class EnemyData : MonoBehaviour
+public class EnemyData
 {
+    public string name;
+    public int enemyHealth;
+    public float attackMultiplier;
+    public float defenseMultiplier;
+    public Card[] enemyBoard;
+    //enemy sign board
 
-    [SerializeField]
-    GameObject gameManager;
-    [SerializeField]
-    TMP_Text text;
-    GameManager manager;
-
-    void Start()
+    public EnemyData(string name, int enemyHealth, float attackMultiplier, float defenseMultiplier)
     {
-        manager = gameManager.GetComponent<GameManager>();
+        this.name = name;
+        this.enemyHealth = enemyHealth;
+        this.attackMultiplier = attackMultiplier;
+        this.defenseMultiplier = defenseMultiplier;
     }
 
-    private void Update()
-    {
-        if (manager.matchData != null)
-        {
-            text.text = manager.matchData.enemyHealth.ToString();
-            Debug.Log($"Enemy healt {manager.matchData.enemyHealth}");
-        }
-    }
 }

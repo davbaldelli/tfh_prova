@@ -2,25 +2,27 @@
 
 public class EnemyEffectGatewayImpl : EnemyEffectGateway
 {
-    MatchData matchData;
+    EnemyData enemyData;
+    PlayerData playerData;
 
-    public EnemyEffectGatewayImpl(MatchData matchData)
+    public EnemyEffectGatewayImpl(EnemyData enemyData, PlayerData playerData)
     {
-        this.matchData = matchData;
+        this.enemyData = enemyData;
+        this.playerData = playerData;   
     }
 
     public void doEvenMoreEvilStuff()
     {
-        matchData.enemyHealth = 10000;
+        enemyData.enemyHealth = 10000;
     }
 
     public void doEvilStuff(int amount)
     {
-        matchData.enemyHealth = amount;
+        enemyData.enemyHealth = amount;
     }
 
     public void makeThePlayerCry()
     {
-        matchData.playerAttackMultiplier = 0.5f;
+        playerData.attackMultiplier = 0.5f;
     }
 }

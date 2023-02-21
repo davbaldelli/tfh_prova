@@ -612,7 +612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2127226154}
-  - component: {fileID: 2127226153}
+  - component: {fileID: 2127226155}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -620,21 +620,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2127226153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127226151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2057dc4f9b085e40b00910ecedc9fa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handsCardCount: 5
-  stats: {fileID: 11400000, guid: 99656b1eb1d06df46ab3650c8279cb6d, type: 2}
-  cowboySlayer: {fileID: 11400000, guid: f31353d0befa35f4495f43ef24c80dad, type: 2}
 --- !u!4 &2127226154
 Transform:
   m_ObjectHideFlags: 0
@@ -650,3 +635,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2127226155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127226151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2057dc4f9b085e40b00910ecedc9fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: 99656b1eb1d06df46ab3650c8279cb6d, type: 2}
+  enemy: {fileID: 11400000, guid: f31353d0befa35f4495f43ef24c80dad, type: 2}

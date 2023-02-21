@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc5f8021bfc37f48acb3058b5e9fa38, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f33d8c44b9086c4cba967ab7ef6ba19, type: 3}
   m_Name: CowboySlayer
   m_EditorClassIdentifier: 
   _effects:
