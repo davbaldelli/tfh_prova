@@ -15,6 +15,8 @@ namespace Enemies
         int _slots;
         [SerializeField]
         string _name;
+        [SerializeField]
+        Sign _sign;
 
         public int slots => _slots;
 
@@ -23,5 +25,7 @@ namespace Enemies
         public EnemyEffect[] effects => _effects.ToArray();
 
         public string enemyName => _name;
+
+        public Sign sign => _sign;
     }
 }

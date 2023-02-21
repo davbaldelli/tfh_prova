@@ -15,6 +15,8 @@ namespace Cards
         private int _life;
         [SerializeField]
         private string _name;
+        [SerializeField]
+        private Sign _sign;
 
         public CardEffect[] passiveEffects => _passiveEffects.ToArray();
 
@@ -23,6 +25,8 @@ namespace Cards
         public int life => _life;
 
         public string cardName => _name;
+
+        public Sign sign => _sign;
     }
 }
 

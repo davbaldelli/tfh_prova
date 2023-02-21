@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44fd0d3aa7d546d4c83c06f8f5711bb6, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d132e938ac0b704d8ece6ce18b21823, type: 3}
   m_Name: JessieJames
   m_EditorClassIdentifier: 
-  _activeEffects:
-  - {fileID: 11400000, guid: 5bb42290b6fb02646bbeaa0f2e0c5262, type: 2}
-  _passiveEffects:
-  - {fileID: 11400000, guid: 32edc6e9d007d1c4490481d18a1705aa, type: 2}
-  _life: 150
-  _name: Jessie James
+  _activeEffects: []
+  _passiveEffects: []
+  _life: 0
+  _name: 
+  _sign: 0

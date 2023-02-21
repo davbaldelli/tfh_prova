@@ -8,5 +8,6 @@ namespace Cards
         public CardEffect[] activeEffects { get; }
         public int life { get; }
         public string cardName { get; }
+        public Sign sign { get; }
     }
 }

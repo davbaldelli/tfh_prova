@@ -9,5 +9,7 @@ namespace Enemies
         public int life { get; }
         public EnemyEffect[] effects { get; }
 
+        public Sign sign { get; }
+
     }
 }

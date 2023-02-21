@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44fd0d3aa7d546d4c83c06f8f5711bb6, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d132e938ac0b704d8ece6ce18b21823, type: 3}
   m_Name: Renegade
   m_EditorClassIdentifier: 
-  _activeEffects:
-  - {fileID: 11400000, guid: 5bb42290b6fb02646bbeaa0f2e0c5262, type: 2}
+  _activeEffects: []
   _passiveEffects: []
-  _life: 90
-  _name: Renegade
+  _life: 0
+  _name: 
+  _sign: 0
