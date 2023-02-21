@@ -2,9 +2,10 @@
 {
     interface Enemy
     {
-        public int slotsCount();
-        public int life();
-        public EnemyEffect[] getEnemyEffects();
+        public string enemyName { get; }
+        public int slots { get; }
+        public int life { get; }
+        public EnemyEffect[] effects { get; }
 
     }
 }

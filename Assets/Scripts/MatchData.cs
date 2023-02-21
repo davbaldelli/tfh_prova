@@ -11,6 +11,7 @@ namespace Assets.Scripts
     {
         public int playerHealth;
         public float playerAttackMultiplier = 1;
+        public float playerDefenseMultiplier = 1;
         public int playerHandCardsCount;
         public int enemyHealth;
         public Stack<Card> playerDeck;

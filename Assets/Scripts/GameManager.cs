@@ -10,13 +10,13 @@ namespace Assets.Scripts
         PlayerStats stats;
         [SerializeField]
         EnemyObject cowboySlayer;
-        MatchData matchData;
+        public MatchData matchData;
 
         GameManagerGateway gateway;
 
         void Start()
         {
-            matchData = new MatchData(stats.life, cowboySlayer.life(), stats.deck.ToArray(), handsCardCount);
+            matchData = new MatchData(stats.life, cowboySlayer.life, stats.StartingDeck.ToArray(), handsCardCount);
             gateway = new GameMangerGatewayImpl(matchData, stats);
             gateway.startGame();
         }

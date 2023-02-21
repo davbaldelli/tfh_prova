@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44fd0d3aa7d546d4c83c06f8f5711bb6, type: 3}
-  m_Name: Gunslinger
+  m_Name: JessieJames
   m_EditorClassIdentifier: 
   _activeEffects:
-  - {fileID: 11400000, guid: 7fe8fb60fb4726e468869bf54845766f, type: 2}
+  - {fileID: 11400000, guid: 5bb42290b6fb02646bbeaa0f2e0c5262, type: 2}
   _passiveEffects:
-  - {fileID: 11400000, guid: 58a78423be25670449ec3cd9bab53e6d, type: 2}
-  _life: 100
-  _name: Gunslinger
+  - {fileID: 11400000, guid: 32edc6e9d007d1c4490481d18a1705aa, type: 2}
+  _life: 150
+  _name: Jessie James

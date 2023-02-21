@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e7f48898297e7439b326bec9d8fa6e, type: 3}
-  m_Name: PlayerStats
+  m_Script: {fileID: 11500000, guid: b4d398ea5f173864abcc798fba42ff9a, type: 3}
+  m_Name: Revenant
   m_EditorClassIdentifier: 
-  life: 100
-  attackMult: 1

@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc5f8021bfc37f48acb3058b5e9fa38, type: 3}
   m_Name: CowboySlayer
   m_EditorClassIdentifier: 
-  lifeAmount: 100
-  slots: 5
+  _effects:
+  - {fileID: 11400000, guid: 148592781485ed64da5c591f90273fb9, type: 2}
+  _life: 100
+  _slots: 3
+  _name: Cowboy Slayer

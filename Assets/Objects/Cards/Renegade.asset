@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44fd0d3aa7d546d4c83c06f8f5711bb6, type: 3}
   m_Name: Renegade
   m_EditorClassIdentifier: 
-  activeEffects:
+  _activeEffects:
   - {fileID: 11400000, guid: 5bb42290b6fb02646bbeaa0f2e0c5262, type: 2}
-  passiveEffects: []
-  life: 100
+  _passiveEffects: []
+  _life: 90
+  _name: Renegade

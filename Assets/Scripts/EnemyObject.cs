@@ -5,22 +5,20 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Enemy", menuName = "Enemy/Enemy")]
 public class EnemyObject : ScriptableObject, Enemy
 {
-    public List<EnemyEffectObject> effects = new List<EnemyEffectObject>();
-    public int lifeAmount;
-    public int slots;
+    [SerializeField]
+    List<EnemyEffectObject> _effects = new List<EnemyEffectObject>();
+    [SerializeField] 
+    int _life;
+    [SerializeField]
+    int _slots;
+    [SerializeField] 
+    string _name;
 
-    public EnemyEffect[] getEnemyEffects()
-    {
-        return effects.ToArray();
-    }
+    public int slots => _slots;
 
-    public int life()
-    {
-        return lifeAmount;
-    }
+    public int life => _life;
 
-    public int slotsCount()
-    {
-        return slots;
-    }
+    public EnemyEffect[] effects => _effects.ToArray();
+
+    public string enemyName => _name;
 }

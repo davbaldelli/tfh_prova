@@ -9,18 +9,21 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="Card", menuName ="Card/Card")]
 public class CardObject : ScriptableObject, Card
 {
-    public List<ActiveCardEffectObject> activeEffects = new List<ActiveCardEffectObject>();
-    public List<PassiveCardEffectObject> passiveEffects = new List<PassiveCardEffectObject>();
-    public int life;
+    [SerializeField] 
+    List<ActiveCardEffectObject> _activeEffects = new List<ActiveCardEffectObject>();
+    [SerializeField] 
+    List<PassiveCardEffectObject> _passiveEffects = new List<PassiveCardEffectObject>();
+    [SerializeField]
+    private int _life;
+    [SerializeField]
+    private string _name;
 
-    public CardEffect[] getActiveEffects()
-    {
-        return activeEffects.ToArray();
-    }
+    public CardEffect[] passiveEffects => _passiveEffects.ToArray();
 
-    public CardEffect[] getPassiveEffects()
-    {
-        return passiveEffects.ToArray();
-    }
+    public CardEffect[] activeEffects => _activeEffects.ToArray();
+
+    public int life => _life;
+
+    public string cardName => _name;
 }
 

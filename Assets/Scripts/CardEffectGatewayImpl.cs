@@ -24,5 +24,10 @@
         {
             matchData.playerAttackMultiplier += amount;
         }
+
+        public void addDefenseMult(float amount)
+        {
+            matchData.playerDefenseMultiplier += amount;
+        }
     }
 }

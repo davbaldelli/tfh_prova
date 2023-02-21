@@ -29,7 +29,7 @@
         {
             //shuffle cards then insert them
 
-            foreach (Card card in playerStats.deck)
+            foreach (Card card in playerStats.StartingDeck)
             {
                 matchData.playerDeck.Push(card);
             }
