@@ -1,4 +1,6 @@
-﻿namespace Assets.Scripts
+﻿using Enemies.Effects;
+
+namespace Enemies
 {
     interface Enemy
     {

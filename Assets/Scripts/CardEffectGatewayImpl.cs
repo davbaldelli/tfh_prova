@@ -1,33 +1,32 @@
-﻿namespace Assets.Scripts
+﻿using Cards.Effects;
+
+public class CardEffectGatewayImpl : CardEffectGateway
 {
-    public class CardEffectGatewayImpl : CardEffectGateway
+
+    MatchData matchData;
+
+    public CardEffectGatewayImpl(MatchData matchData)
     {
+        this.matchData = matchData;
+    }
 
-        MatchData matchData;
+    public void addLife(int amount)
+    {
+        matchData.playerHealth += amount;
+    }
 
-        public CardEffectGatewayImpl(MatchData matchData)
-        {
-            this.matchData = matchData;
-        }
+    public void drawCard()
+    {
+        matchData.playerHand.Add(matchData.discardDeck.Pop());
+    }
 
-        public void addLife(int amount)
-        {
-            matchData.playerHealth += amount;
-        }
+    public void addAttackMult(float amount)
+    {
+        matchData.playerAttackMultiplier += amount;
+    }
 
-        public void drawCard()
-        {
-            matchData.playerHand.Add(matchData.discardDeck.Pop());
-        }
-
-        public void addAttackMult(float amount)
-        {
-            matchData.playerAttackMultiplier += amount;
-        }
-
-        public void addDefenseMult(float amount)
-        {
-            matchData.playerDefenseMultiplier += amount;
-        }
+    public void addDefenseMult(float amount)
+    {
+        matchData.playerDefenseMultiplier += amount;
     }
 }

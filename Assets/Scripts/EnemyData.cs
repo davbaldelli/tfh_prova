@@ -1,31 +1,26 @@
-﻿using System;
-using System.Collections;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
-namespace Assets.Scripts
+public class EnemyData : MonoBehaviour
 {
-    public class EnemyData : MonoBehaviour
+
+    [SerializeField]
+    GameObject gameManager;
+    [SerializeField]
+    TMP_Text text;
+    GameManager manager;
+
+    void Start()
     {
+        manager = gameManager.GetComponent<GameManager>();
+    }
 
-        [SerializeField]
-        GameObject gameManager;
-        [SerializeField]
-        TMP_Text text;
-        GameManager manager;
-
-        void Start()
+    private void Update()
+    {
+        if (manager.matchData != null)
         {
-            manager = gameManager.GetComponent<GameManager>();
-        }
-
-        private void Update()
-        {
-            if (manager.matchData != null)
-            {
-                text.text = manager.matchData.enemyHealth.ToString();
-                Debug.Log($"Enemy healt {manager.matchData.enemyHealth}");
-            }
+            text.text = manager.matchData.enemyHealth.ToString();
+            Debug.Log($"Enemy healt {manager.matchData.enemyHealth}");
         }
     }
 }

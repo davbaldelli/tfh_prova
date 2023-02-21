@@ -1,11 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Revenant", menuName = "Card/PassiveEffect/Revenant")]
-internal class Revenant : PassiveCardEffectObject
-{
-    public override void callEffect(CardEffectGateway gateway)
+namespace Cards.Effects { 
+    [CreateAssetMenu(fileName = "Revenant", menuName = "Card/PassiveEffect/Revenant")]
+    public class Revenant : PassiveCardEffectObject
     {
-        throw new NotImplementedException();
+        public override void callEffect(CardEffectGateway gateway)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

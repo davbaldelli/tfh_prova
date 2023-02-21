@@ -1,13 +1,13 @@
-using Assets.Scripts;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Rage", menuName = "Card/ActiveEffect/Rage")]
-public class Rage : ActiveCardEffectObject
+namespace Cards.Effects
 {
-    public override void callEffect(CardEffectGateway gateway)
+    [CreateAssetMenu(fileName = "Rage", menuName = "Card/ActiveEffect/Rage")]
+    public class Rage : ActiveCardEffectObject
     {
-        gateway.addAttackMult(0.2f);
+        public override void callEffect(CardEffectGateway gateway)
+        {
+            gateway.addAttackMult(0.2f);
+        }
     }
 }

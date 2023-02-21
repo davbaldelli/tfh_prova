@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Assets.Scripts.Cards.Effects
+namespace Cards.Effects
 {
     [CreateAssetMenu(fileName = "Braveheart", menuName = "Card/PassiveEffect/Braveheart")]
     public class Braveheart : PassiveCardEffectObject

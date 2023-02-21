@@ -1,9 +1,6 @@
-﻿namespace Assets.Scripts
+﻿public interface GameManagerGateway
 {
-    public interface GameManagerGateway
-    {
-        public void finishTurn();
-        public void startGame();
-        public void drawCards();
-    }
+    public void finishTurn();
+    public void startGame();
+    public void drawCards();
 }
