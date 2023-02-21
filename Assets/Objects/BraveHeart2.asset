@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e7f48898297e7439b326bec9d8fa6e, type: 3}
-  m_Name: PlayerStats
+  m_Script: {fileID: 11500000, guid: 45c97a55d99e1ef4dbfd47ebf172b53d, type: 3}
+  m_Name: BraveHeart2
   m_EditorClassIdentifier: 
-  life: 101
-  attackMult: 1
+  amount: 55

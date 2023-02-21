@@ -9,6 +9,8 @@ namespace Assets.Scripts
 {
     public class MatchData
     {
+        public event Action<int> healthUpdated;
+
         public int playerHealth;
         public float playerAttackMultiplier = 1;
         public int playerHandCardsCount;

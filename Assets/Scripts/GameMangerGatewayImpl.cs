@@ -36,7 +36,7 @@
 
             for (int i = 0; i < matchData.playerHandCardsCount; i++)
             {
-                matchData.playerHand.Add(matchData.playerDeck.Pop());
+                matchData.playerHand.Add(matchData.playerDeck.Pop());                                                                                                                                                                                                               
             }
         }
 
