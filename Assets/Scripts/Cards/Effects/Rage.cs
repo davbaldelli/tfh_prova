@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rage : ActiveCardEffect
+[CreateAssetMenu(fileName = "Rage", menuName = "Card/ActiveEffect/Rage")]
+public class Rage : ActiveCardEffectObject
 {
-    public void callEffect(CardEffectGateway gateway)
+    public override void callEffect(CardEffectGateway gateway)
     {
         gateway.addAttackMult(0.2f);
     }

@@ -1,17 +1,15 @@
-﻿using System;
+﻿using Assets.Scripts;
+using System;
 using UnityEngine;
 
-namespace Assets.Scripts.Enemies.Effects
+[CreateAssetMenu(fileName = "VeryEvil", menuName = "Enemy/Effect/VeryEvil")]
+public class VeryEvil : EnemyEffectObject
 {
-    [Serializable]
-    public class VeryEvil : EnemyEffect
-    {
-        [SerializeField]
-        int evilness;
+    [SerializeField]
+    int evilness;
 
-        public void callEffect(EnemyEffectGateway gateway)
-        {
-            gateway.doEvilStuff(evilness);
-        }
+    public override void callEffect(EnemyEffectGateway gateway)
+    {
+        gateway.doEvilStuff(evilness);
     }
 }

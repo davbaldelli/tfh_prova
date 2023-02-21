@@ -1,6 +1,4 @@
-﻿using Assets.Scripts.Cards;
-using Assets.Scripts.Enemies;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -11,7 +9,7 @@ namespace Assets.Scripts
         [SerializeField]
         PlayerStats stats;
         [SerializeField]
-        CowboySlayer cowboySlayer;
+        EnemyObject cowboySlayer;
         MatchData matchData;
 
         GameManagerGateway gateway;

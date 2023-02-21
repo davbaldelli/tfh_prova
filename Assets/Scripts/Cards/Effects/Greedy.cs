@@ -1,8 +1,11 @@
-﻿namespace Assets.Scripts.Cards.Effects
+﻿using UnityEngine;
+
+namespace Assets.Scripts.Cards.Effects
 {
-    public class Greedy : ActiveCardEffect
+    [CreateAssetMenu(fileName = "Greedy", menuName = "Card/ActiveEffect/Greedy")]
+    public class Greedy : ActiveCardEffectObject
     {
-        public void callEffect(CardEffectGateway gateway)
+        public override void callEffect(CardEffectGateway gateway)
         {
             gateway.drawCard();
         }
