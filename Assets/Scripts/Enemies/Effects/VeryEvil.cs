@@ -1,16 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts.Enemies.Effects
 {
-    class VeryEvil : EnemyEffect
+    [Serializable]
+    public class VeryEvil : EnemyEffect
     {
+        [SerializeField]
+        int evilness;
+
         public void callEffect(EnemyEffectGateway gateway)
         {
-            gateway.doEvilStuff();
+            gateway.doEvilStuff(evilness);
         }
     }
 }

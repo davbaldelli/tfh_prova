@@ -1,35 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Assets.Scripts
+﻿namespace Assets.Scripts
 {
     public class EnemyEffectGatewayImpl : EnemyEffectGateway
     {
-        EnemyData enemyData;
-        PlayerStats playerStats;
+        MatchData matchData;
 
-        public EnemyEffectGatewayImpl(EnemyData enemyData, PlayerStats playerStats)
+        public EnemyEffectGatewayImpl(MatchData matchData)
         {
-            this.enemyData = enemyData;
-            this.playerStats = playerStats;
+            this.matchData = matchData;
         }
 
         public void doEvenMoreEvilStuff()
         {
-            enemyData.life = 10000;
+            matchData.enemyHealth = 10000;
         }
 
-        public void doEvilStuff()
+        public void doEvilStuff(int amount)
         {
-            enemyData.life = 1000;
+            matchData.enemyHealth = amount;
         }
 
         public void makeThePlayerCry()
         {
-            playerStats.attackMult = 0.5f;
+            matchData.playerAttackMultiplier = 0.5f;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Cards;
+using Assets.Scripts.Enemies;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -6,17 +7,20 @@ namespace Assets.Scripts
     public class GameManager : MonoBehaviour
     {
         [SerializeField]
+        int handsCardCount;
+        [SerializeField]
         PlayerStats stats;
         [SerializeField]
-        Deck deck;
-        Card[] startingCards = new Card[] {new Gunslinger(), new Gunslinger(), new Renegade()};
+        CowboySlayer cowboySlayer;
+        MatchData matchData;
 
         GameManagerGateway gateway;
 
         void Start()
         {
-            gateway = new GameMangerGatewayImpl(deck, stats);
-            gateway.startGame(startingCards);
+            matchData = new MatchData(stats.life, cowboySlayer.life(), stats.deck.ToArray(), handsCardCount);
+            gateway = new GameMangerGatewayImpl(matchData, stats);
+            gateway.startGame();
         }
     }
 }

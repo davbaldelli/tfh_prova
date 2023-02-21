@@ -8,6 +8,6 @@ namespace Assets.Scripts
     {
         public int life;
         public float attackMult;
-        public List<Card> hand = new List<Card>();
+        public List<Card> deck = new List<Card>();
     }
 }

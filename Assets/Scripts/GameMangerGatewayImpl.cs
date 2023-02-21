@@ -2,22 +2,21 @@
 {
     public class GameMangerGatewayImpl : GameManagerGateway
     {
-        Deck deck;
+        MatchData matchData;
         PlayerStats playerStats;
 
-
-        public GameMangerGatewayImpl(Deck deck, PlayerStats playerStats)
+        public GameMangerGatewayImpl(MatchData matchData, PlayerStats playerStats)
         {
-            this.deck = deck;
+            this.matchData = matchData;
             this.playerStats = playerStats;
         }
 
         public void drawCards()
         {
-            if (playerStats.hand.Count < 5)
+            if (matchData.playerHand.Count < matchData.playerHandCardsCount)
             {
-                for (int i = 0; i < 5 - playerStats.hand.Count; i++)
-                    deck.getCardFromTop();
+                for (int i = 0; i < matchData.playerHandCardsCount - matchData.playerHand.Count; i++)
+                    matchData.playerDeck.Pop();
             }
         }
 
@@ -26,22 +25,18 @@
             //do stuff
         }
 
-        public void startGame(Card[] statringCards)
+        public void startGame()
         {
-
-            playerStats.life = 100;
-            playerStats.attackMult = 1;
-
             //shuffle cards then insert them
 
-            foreach (Card card in statringCards)
+            foreach (Card card in playerStats.deck)
             {
-                deck.addCardToTop(card);
+                matchData.playerDeck.Push(card);
             }
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < matchData.playerHandCardsCount; i++)
             {
-                deck.getCardFromTop();
+                matchData.playerHand.Add(matchData.playerDeck.Pop());
             }
         }
 

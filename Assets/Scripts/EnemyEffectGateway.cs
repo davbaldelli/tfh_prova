@@ -8,7 +8,7 @@ namespace Assets.Scripts
 {
     public interface EnemyEffectGateway
     {
-        public void doEvilStuff();
+        public void doEvilStuff(int amount);
 
         public void doEvenMoreEvilStuff();
 
