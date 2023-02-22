@@ -2,8 +2,8 @@
 
 namespace Enemies.Effects
 {
-    public abstract class EnemyEffectObject : ScriptableObject, EnemyEffect
+    public abstract class EnemyEffectObject : ScriptableObject, IEnemyEffect
     {
-        public abstract void callEffect(EnemyEffectGateway gateway);
+        public abstract void callEffect(IEnemyEffectGateway gateway);
     }
 }

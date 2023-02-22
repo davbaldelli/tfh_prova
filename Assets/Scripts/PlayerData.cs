@@ -7,11 +7,11 @@ public class PlayerData
     public float attackMultiplier;
     public float defenseMultiplier;
     public int handCount;
-    public Stack<Card> playerDeck;
-    public Stack<Card> discardDeck = new Stack<Card>();
-    public List<Card> hand = new List<Card>();
+    public Stack<ICard> playerDeck;
+    public Stack<ICard> discardDeck = new Stack<ICard>();
+    public List<ICard> hand = new List<ICard>();
 
-    public PlayerData(int health, float attackMultiplier, float defenseMultiplier, Stack<Card> playerDeck, int handCount)
+    public PlayerData(int health, float attackMultiplier, float defenseMultiplier, Stack<ICard> playerDeck, int handCount)
     {
         this.health = health;
         this.attackMultiplier = attackMultiplier;

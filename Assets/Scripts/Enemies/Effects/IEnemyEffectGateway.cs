@@ -1,6 +1,6 @@
 ﻿namespace Enemies.Effects
 {
-    public interface EnemyEffectGateway
+    public interface IEnemyEffectGateway
     {
         public void doEvilStuff(int amount);
 

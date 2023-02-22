@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Cards
 {
     [CreateAssetMenu(fileName = "Card", menuName = "Card/Card")]
-    public class CardObject : ScriptableObject, Card
+    public class CardObject : ScriptableObject, ICard
     {
         [SerializeField]
         List<ActiveCardEffectObject> _activeEffects = new List<ActiveCardEffectObject>();
@@ -18,11 +18,11 @@ namespace Cards
         [SerializeField]
         private Sign _sign;
 
-        public CardEffect[] passiveEffects => _passiveEffects.ToArray();
+        public ICardEffect[] passiveEffects => _passiveEffects.ToArray();
 
-        public CardEffect[] activeEffects => _activeEffects.ToArray();
+        public ICardEffect[] activeEffects => _activeEffects.ToArray();
 
-        public int life => _life;
+        public int life { get => _life; set => _life = value; }
 
         public string cardName => _name;
 

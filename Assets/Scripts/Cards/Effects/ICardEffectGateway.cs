@@ -1,6 +1,6 @@
 namespace Cards.Effects
 {
-    public interface CardEffectGateway
+    public interface ICardEffectGateway
     {
         public void addLife(int amount);
         public void addAttackMult(float amount);

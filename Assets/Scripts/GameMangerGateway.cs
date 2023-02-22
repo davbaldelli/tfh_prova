@@ -1,11 +1,12 @@
 ﻿using Cards;
+using System.Diagnostics;
 
-public class GameMangerGatewayImpl : GameManagerGateway
+public class GameMangerGateway : IGameManagerGateway
 {
     PlayerData playerData;
     EnemyData enemyData;
 
-    public GameMangerGatewayImpl(PlayerData playerData, EnemyData enemyData)
+    public GameMangerGateway(PlayerData playerData, EnemyData enemyData)
     {
         this.playerData = playerData;
         this.enemyData = enemyData;

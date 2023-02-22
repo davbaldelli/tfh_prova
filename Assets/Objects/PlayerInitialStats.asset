@@ -15,11 +15,10 @@ MonoBehaviour:
   life: 500
   attackMult: 1
   defenseMult: 1
+  heandCardsCount: 5
   StartingDeck:
   - {fileID: 11400000, guid: ffbd40f950f026a47a642736bee55456, type: 2}
   - {fileID: 11400000, guid: ffbd40f950f026a47a642736bee55456, type: 2}
-  - {fileID: 11400000, guid: ffbd40f950f026a47a642736bee55456, type: 2}
   - {fileID: 11400000, guid: 5c56a62b31ff6734595ec2e912a48c8b, type: 2}
   - {fileID: 11400000, guid: 5c56a62b31ff6734595ec2e912a48c8b, type: 2}
-  - {fileID: 11400000, guid: 5c56a62b31ff6734595ec2e912a48c8b, type: 2}
-  - {fileID: 11400000, guid: 72ba9cc75da6244428d096dbcbca4fa1, type: 2}
+  - {fileID: 11400000, guid: 35e2e34ee936e434aba1e3689d34022e, type: 2}

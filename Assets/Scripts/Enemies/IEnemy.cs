@@ -2,12 +2,12 @@
 
 namespace Enemies
 {
-    interface Enemy
+    interface IEnemy
     {
         public string enemyName { get; }
         public int slots { get; }
         public int life { get; }
-        public EnemyEffect[] effects { get; }
+        public IEnemyEffect[] effects { get; }
 
         public Sign sign { get; }
 

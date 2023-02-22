@@ -1,11 +1,11 @@
 ﻿using Enemies.Effects;
 
-public class EnemyEffectGatewayImpl : EnemyEffectGateway
+public class EnemyEffectGateway : IEnemyEffectGateway
 {
     EnemyData enemyData;
     PlayerData playerData;
 
-    public EnemyEffectGatewayImpl(EnemyData enemyData, PlayerData playerData)
+    public EnemyEffectGateway(EnemyData enemyData, PlayerData playerData)
     {
         this.enemyData = enemyData;
         this.playerData = playerData;   

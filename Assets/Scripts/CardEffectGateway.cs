@@ -1,11 +1,11 @@
 ﻿using Cards.Effects;
 
-public class CardEffectGatewayImpl : CardEffectGateway
+public class CardEffectGateway : ICardEffectGateway
 {
 
     PlayerData playerData;
 
-    public CardEffectGatewayImpl(PlayerData playerData)
+    public CardEffectGateway(PlayerData playerData)
     {
         this.playerData = playerData;
     }

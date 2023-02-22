@@ -8,7 +8,7 @@ namespace Enemies.Effects
         [SerializeField]
         int evilness;
 
-        public override void callEffect(EnemyEffectGateway gateway)
+        public override void callEffect(IEnemyEffectGateway gateway)
         {
             gateway.doEvilStuff(evilness);
         }

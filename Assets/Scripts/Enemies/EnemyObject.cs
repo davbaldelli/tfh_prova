@@ -5,7 +5,7 @@ using Enemies.Effects;
 namespace Enemies
 {
     [CreateAssetMenu(fileName = "Enemy", menuName = "Enemy/Enemy")]
-    public class EnemyObject : ScriptableObject, Enemy
+    public class EnemyObject : ScriptableObject, IEnemy
     {
         [SerializeField]
         List<EnemyEffectObject> _effects = new List<EnemyEffectObject>();
@@ -22,7 +22,7 @@ namespace Enemies
 
         public int life => _life;
 
-        public EnemyEffect[] effects => _effects.ToArray();
+        public IEnemyEffect[] effects => _effects.ToArray();
 
         public string enemyName => _name;
 

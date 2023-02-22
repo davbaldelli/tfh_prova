@@ -9,5 +9,16 @@ public class PlayerStats : ScriptableObject
     public float attackMult = 1;
     public float defenseMult = 1;
     public int heandCardsCount = 5;
-    public List<CardObject> StartingDeck = new List<CardObject>();
+    public List<CardObject> startingDeckTemplate = new List<CardObject>();
+
+    public List<ICard> getStartingDeck()
+    {
+        List<ICard> deck = new List<ICard>();
+        foreach(CardObject cardTemplate in startingDeckTemplate)
+        {
+            deck.Add(new Card(cardTemplate));
+        }
+        return deck;
+    }
+
 }

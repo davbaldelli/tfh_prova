@@ -1,4 +1,4 @@
-﻿public interface GameManagerGateway
+﻿public interface IGameManagerGateway
 {
     public void finishTurn();
     public void startGame();

@@ -6,7 +6,7 @@ public class EnemyData
     public int enemyHealth;
     public float attackMultiplier;
     public float defenseMultiplier;
-    public Card[] enemyBoard;
+    public ICard[] enemyBoard;
     //enemy sign board
 
     public EnemyData(string name, int enemyHealth, float attackMultiplier, float defenseMultiplier)

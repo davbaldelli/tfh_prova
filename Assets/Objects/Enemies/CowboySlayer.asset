@@ -17,3 +17,4 @@ MonoBehaviour:
   _life: 100
   _slots: 3
   _name: Cowboy Slayer
+  _sign: 1

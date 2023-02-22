@@ -13,15 +13,20 @@ public class GameManager : MonoBehaviour
     public EnemyData enemyData;
     
 
-    GameManagerGateway gateway;
+    IGameManagerGateway gateway;
 
     void Start()
     {
-        stats.StartingDeck.Shuffle();
-        playerData = new PlayerData(stats.life, stats.attackMult, stats.defenseMult, new Stack<Card>(stats.StartingDeck), stats.heandCardsCount);
+        stats.startingDeckTemplate.Shuffle();
+        playerData = new PlayerData(stats.life, stats.attackMult, stats.defenseMult, new Stack<ICard>(stats.getStartingDeck()), stats.heandCardsCount);
         enemyData = new EnemyData(enemy.name, enemy.life, 1, 1);
-        gateway = new GameMangerGatewayImpl(playerData, enemyData);
+        gateway = new GameMangerGateway(playerData, enemyData);
         gateway.startGame();
+        playerData.hand[0].life = 55;
+        foreach(ICard card in playerData.hand)
+        {
+            Debug.Log($"{card.cardName} -> {card.life}");
+        }
     }
 }
 
